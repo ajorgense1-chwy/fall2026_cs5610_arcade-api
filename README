@@ -1,0 +1,6 @@
+## Instructions
+
+* Install dependencies `npm install`
+* create .env file (`touch .env`) and add the MONGODB_URI value (see slides)
+* to run `npm run dev`
+* to test, import the yml file in /bruno into the bruno app (you will need to install separately)

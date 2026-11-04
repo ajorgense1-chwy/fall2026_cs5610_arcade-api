@@ -1,0 +1,91 @@
+opencollection: 1.0.0
+info:
+  name: WebDevFall2026
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ''
+      port: ''
+      auth:
+        username: ''
+        password: ''
+      bypassProxy: ''
+items:
+  - info:
+      name: Simple GET
+      type: http
+      seq: 1
+    http:
+      method: GET
+      url: http://localhost:3000/api/tictactoe/6aeab77ca92dfaaa1704ddf0
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+  - info:
+      name: Simple POST
+      type: http
+      seq: 2
+    http:
+      method: POST
+      url: http://localhost:3000/api/tictactoe
+      body:
+        type: json
+        data: |-
+          {
+            "newNumber": 300000
+          }
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+  - info:
+      name: Simple DELETE
+      type: http
+      seq: 3
+    http:
+      method: DELETE
+      url: http://localhost:3000/api/tictactoe/2
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+  - info:
+      name: Simple PATCH
+      type: http
+      seq: 4
+    http:
+      method: PATCH
+      url: http://localhost:3000/api/tictactoe/6aeabbd3b27d9aadf93219d8
+      body:
+        type: json
+        data: |-
+          {
+            status: 'waiting'
+          }
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+bundled: true
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
+    exportedAt: '2026-11-04T16:20:45.438Z'
+    exportedUsing: Bruno
